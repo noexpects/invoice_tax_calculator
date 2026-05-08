@@ -1,0 +1,14 @@
+import_duty_rate: 0.05
+basic_tax_rate: 0.10
+goods:
+  - book
+  - music cd
+  - chocolate bar
+  - box of chocolates
+  - boxes of chocolates
+  - bottle of perfume
+  - packet of headache pills
+exempt_keywords:
+  - book
+  - chocolate
+  - pill
