@@ -27,7 +27,7 @@ class Main
   attr_reader :processor
 
   def print_banner
-    puts 'Invoice tax calculator App'
+    puts 'Invoice Tax Calculator App'
     puts 'Supported commands: add_item, list_items, delete_item, generate_invoice, exit'
   end
 end

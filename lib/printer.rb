@@ -34,7 +34,6 @@ class Printer
     end
 
     print_message("Sales Taxes: #{format('%.2f', receipt.sales_taxes)}")
-
     print_message("Total: #{format('%.2f', receipt.total)}")
   end
 end

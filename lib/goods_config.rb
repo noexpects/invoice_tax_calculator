@@ -6,10 +6,6 @@ class GoodsConfig
   CONFIG_PATH = File.expand_path('../data/goods_config.yaml', __dir__)
 
   class << self
-    def data
-      @data ||= YAML.load_file(CONFIG_PATH)
-    end
-
     def basic_tax_rate
       data['basic_tax_rate'].to_f
     end
@@ -27,6 +23,10 @@ class GoodsConfig
     end
 
     private
+
+    def data
+      @data ||= YAML.load_file(CONFIG_PATH)
+    end
 
     def exempt_keywords
       data['exempt_keywords']

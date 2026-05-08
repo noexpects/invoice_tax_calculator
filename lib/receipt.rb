@@ -15,10 +15,6 @@ class Receipt
     items.delete_at(index)
   end
 
-  def empty?
-    items.empty?
-  end
-
   def sales_taxes
     items.sum(&:sales_tax)
   end

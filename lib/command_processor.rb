@@ -22,7 +22,7 @@ class CommandProcessor
       handle_add_item(Regexp.last_match(1))
     when 'list_items'
       handle_list_items
-    when /^delete_item\s+(\d+)$/
+    when /^delete_item\s+(-?\d+)$/
       handle_delete_item(Regexp.last_match(1).to_i)
     when 'generate_invoice'
       handle_generate_invoice

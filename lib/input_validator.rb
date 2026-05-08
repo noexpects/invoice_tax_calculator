@@ -23,13 +23,13 @@ class InputValidator
     end
 
     quantity = match[1].to_i
-    name = match[2].strip.downcase
+    name = match[2].strip
     price = match[3].to_f
 
     result.add_error('Quantity must be greater than 0') if quantity <= 0
     result.add_error('Price must be greater than 0') if price <= 0
 
-    unless GoodsConfig.valid_good?(name.gsub('imported', '').strip.gsub(/\s+/, ' '))
+    unless GoodsConfig.valid_good?(name.downcase.gsub('imported', '').strip.gsub(/\s+/, ' '))
       result.add_error('Invalid item entries')
     end
 
